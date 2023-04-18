@@ -14,20 +14,26 @@
 9. Quotes
 10. SED Editor
 ### SED Command Options
+```bash
 - delete some lines 
     - based on line numbers 
         sed -i -e '1d' passwd 
     - string based delete 
         sed -i -e '/nologin/ d' passwd
-
+```
 - add some lines 
-    - sed -i -e '1 a Hello' -e '/monogd/ a Hello World' passwd 
-- modify(change) some lines 
+```bash
+    - sed -i -e '1 a Hello' -e '/monogd/ a Hello World' passwd
+```     
+- modify(change) some lines
+```bash 
     sed -i -e '2 c Hello Universe' -e '/centos/ c Hello Galaxy' passwd
+```
 
-
-- delete some words 
+- delete some words
+```bash 
     sed -i -e 's|Hello||g' passwd 
+```    
 - modify(substitute) some words
 ```bash 
     sed -i -e 's|bin|BIN|g' passwd 
